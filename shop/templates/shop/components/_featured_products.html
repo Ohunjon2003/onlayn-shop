@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center justify-content-start">
+    <div class="rounded" style="width: 100px; height: 100px;">
+        <img src="{{ product.image.url }}" class="img-fluid rounded" alt="Image">
+    </div>
+    <div>
+        <h6 class="mb-2" style="margin-left: 10px">{{ product.name }}</h6>
+        <div class="d-flex mb-2" style="margin-left: 10px">
+            <i class="fa fa-star text-secondary"></i>
+            <i class="fa fa-star text-secondary"></i>
+            <i class="fa fa-star text-secondary"></i>
+            <i class="fa fa-star text-secondary"></i>
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="d-flex mb-2">
+            <h5 class="fw-bold me-2" style="margin-left: 10px">{{ product.discount }} $</h5>
+            <h5 class="text-danger text-decoration-line-through" style="margin-left: 5px">{{ product.price }} $</h5>
+        </div>
+    </div>
+</div>

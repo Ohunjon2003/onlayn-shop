@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    {% include 'components/_styles.html' %}
+
+</head>
+
+<body>
+
+<!--Spinner Start -->
+{% include 'components/_spinner.html' %}
+<!--Spinner End -->
+
+
+<!-- Navbar start -->
+{% include 'components/_navbar.html' %}
+<!-- Navbar End -->
+
+
+<!-- Modal Search Start -->
+{% include 'components/_model_search.html' %}
+<!-- Modal Search End -->
+
+
+{% block hero %}
+<!-- Hero Start -->
+{% include 'components/_hero.html' %}
+<!-- Hero End -->
+{% endblock hero %}
+
+
+{% block feature %}
+<!-- Featurs Section Start -->
+{% include 'components/_feature.html' %}
+<!-- Featurs Section End -->
+{% endblock feature %}
+
+
+{% block main %}
+{% endblock main %}
+
+
+<!-- Footer Start -->
+{% include 'components/_footer.html' %}
+<!-- Footer End -->
+
+
+{% include 'components/_scripts.html' %}
+</body>
+
+</html>

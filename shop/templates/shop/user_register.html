@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block hero %}
+
+{% endblock hero %}
+
+{% block feature %}
+
+{% endblock feature %}
+
+{% block main %}
+{% include 'shop/components/_singleheader.html' %}
+<div class="container mt-5">
+  <h2>Ro'yxatdan o'tish</h2>
+  <form method="post" action="{% url 'user_register' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-primary" style="color: white;">Ro'yxatdan o'tish</button>
+  </form>
+</div>
+{% endblock main %}

@@ -1,0 +1,22 @@
+{% for pr in product.category.product_set.all %}
+{% if pr != product %}
+<div class="border border-primary rounded position-relative vesitable-item">
+    <div class="vesitable-img">
+        <img src="{{ pr.image.url }}" class="img-fluid w-100 rounded-top" alt="">
+    </div>
+    <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
+         style="top: 10px; right: 10px;">{{ pr.category }}
+    </div>
+    <div class="p-4 pb-0 rounded-bottom">
+        <h4>{{ pr.name }}</h4>
+        <p>{{ pr.description|truncatewords:15 }}</p>
+        <div class="d-flex justify-content-between flex-lg-wrap">
+            <p class="text-dark fs-5 fw-bold">${{ pr.price }} / kg</p>
+            <a href="{% url 'product_detail' pr.slug %}"
+               class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
+                    class="fa fa-shopping-bag me-2 text-primary"></i> Sotib olish</a>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}

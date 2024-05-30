@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}
+To'lov Tasdiqlandi
+{% endblock title %}
+
+{% block main %}
+
+<div id="main-content" style="text-align: center; padding: 20px;">
+    <h1 style="color: green;">To'lov Muvafaqiyatli Amalga Oshirildi</h1>
+    <p>To'lovingiz uchun rahmat! Xizmatlarimizdan foydalanganingizdan mamnunmiz.</p>
+    <a href="{% url 'index' %}"
+       style="display: inline-block; margin-top: 20px; padding: 10px 20px; background-color: blue; color: white; text-decoration: none; border-radius: 5px;">Bosh
+        Sahifa</a>
+</div>
+
+{% endblock main %}
